@@ -1,0 +1,70 @@
+package com.android.monagealpha;
+
+public class Users {
+    private  String nama;
+    private String email;
+    private String password;
+    private int pemasukan;
+    private int pengeluaran;
+    private int saldo;
+
+    public Users() {
+    }
+
+    public Users(String nama, String email, String password, int pemasukan, int pengeluaran, int saldo) {
+        this.nama = nama;
+        this.email = email;
+        this.password = password;
+        this.pemasukan = pemasukan;
+        this.pengeluaran = pengeluaran;
+        this.saldo = saldo;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getPemasukan() {
+        return pemasukan;
+    }
+
+    public void setPemasukan(int pemasukan) {
+        this.pemasukan = pemasukan;
+    }
+
+    public int getPengeluaran() {
+        return pengeluaran;
+    }
+
+    public void setPengeluaran(int pengeluaran) {
+        this.pengeluaran = pengeluaran;
+    }
+
+    public int getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(int saldo) {
+        this.saldo = saldo;
+    }
+}

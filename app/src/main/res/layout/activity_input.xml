@@ -131,10 +131,10 @@
 
     <TextView
         android:id="@+id/textTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="27dp"
         android:layout_marginTop="24dp"
-        android:text="Pemasukan"
+        android:text="Pengeluaran"
         android:textColor="#000"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -177,205 +177,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textTitle"
         tools:layout_editor_absoluteX="24dp" />
 
-    <TextView
-        android:id="@+id/viewInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="28dp"
-        android:text=""
-        android:textAllCaps="true"
-        android:textColor="#FDA300"
-        android:textSize="35dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
-
-    <Button
-        android:id="@+id/btn9"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:background="@color/number"
-        android:text="9"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnC"
-        app:layout_constraintEnd_toStartOf="@+id/btnminus"
-        app:layout_constraintStart_toEndOf="@+id/btn8" />
-
-    <Button
-        android:id="@+id/btnplus2"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:background="@color/number"
-        android:text="."
-        android:textColor="#82475B"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn8"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/checkcircle"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:background="@color/number"
-        android:drawableBottom="@drawable/ic_check_circle_black_24dp"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnC" />
-
-    <Button
-        android:id="@+id/btnminus"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:background="@color/number"
-        android:text="-"
-        android:textColor="#82475B"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/checkcircle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn9" />
-
-    <Button
-        android:id="@+id/btnplus"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="1dp"
-        android:background="@color/number"
-        android:text="+"
-        android:textColor="#82475B"
-        android:textSize="45sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnminus"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/btn4"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-
-        android:background="@color/number"
-        android:text="4"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn7"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btn5"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="128dp"
-        android:background="@color/number"
-        android:text="5"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn6"
-        app:layout_constraintStart_toEndOf="@+id/btn4"
-        app:layout_constraintTop_toTopOf="@+id/btn2"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/btn6"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:layout_marginEnd="1dp"
-
-        android:background="@color/number"
-        android:text="6"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn9"
-        app:layout_constraintEnd_toStartOf="@+id/btnplus"
-        app:layout_constraintStart_toEndOf="@+id/btn2" />
-
-    <Button
-        android:id="@+id/btn7"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:background="@color/number"
-        android:text="7"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnplus2"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btn8"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:background="@color/number"
-        android:text="8"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnplus2"
-        app:layout_constraintEnd_toStartOf="@+id/btn9"
-        app:layout_constraintStart_toEndOf="@+id/btn7" />
-
-    <Button
-        android:id="@+id/btnC"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:background="@color/number"
-        android:drawableBottom="@drawable/ic_backspace_black_24dp"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/checkcircle"
-        app:layout_constraintStart_toEndOf="@+id/btn0" />
-
-    <Button
-        android:id="@+id/btncalender"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:background="@color/number"
-        android:drawableBottom="@drawable/ic_date_range_black_24dp"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnplus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn3" />
-
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:background="@color/number"
-        android:text="2"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn6"
-        app:layout_constraintEnd_toStartOf="@+id/btn3"
-        app:layout_constraintStart_toEndOf="@+id/btn1" />
-
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:background="@color/number"
-        android:text="3"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn6"
-        app:layout_constraintEnd_toStartOf="@+id/btncalender"
-        app:layout_constraintStart_toEndOf="@+id/btn2" />
-
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-
-        android:background="@color/number"
-        android:text="1"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn4"
-        app:layout_constraintEnd_toStartOf="@+id/btn2"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btn0"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:background="@color/number"
-        android:text="0"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnC"
-        app:layout_constraintStart_toEndOf="@+id/btnplus2" />
-
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switchbutton"
         android:layout_width="70dp"
@@ -406,13 +207,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textTitle" />
 
     <Button
-        android:id="@+id/inputKategori2"
+        android:id="@+id/btnDate"
         android:layout_width="399dp"
         android:layout_height="50dp"
         android:layout_marginTop="196dp"
         android:background="@android:color/transparent"
         android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
-        android:text="Hari ini"
         android:textAlignment="textEnd"
         android:textAllCaps="false"
         android:textColor="#FDA300"
@@ -423,15 +223,48 @@
         app:layout_constraintTop_toBottomOf="@+id/textTitle" />
 
     <TextView
-        android:id="@+id/viewKategori"
+        android:id="@+id/viewDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="36dp"
+        android:fontFamily="sans-serif"
         android:text=""
-        android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="@+id/inputKategori"
-        app:layout_constraintTop_toBottomOf="@+id/viewInput" />
+        android:textColor="#FDA300"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnDate" />
+
+    <EditText
+        android:id="@+id/inputUang"
+        android:layout_width="260dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="64dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="number"
+        android:textAlignment="viewEnd"
+        android:textColor="#D55252"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
+
+    <TextView
+        android:id="@+id/viewIDR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:text="IDR"
+        android:textColor="#D55252"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inputUang"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
