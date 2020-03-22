@@ -7,17 +7,19 @@ public class Users {
     private int pemasukan;
     private int pengeluaran;
     private int saldo;
+    private String kategori;
 
     public Users() {
     }
 
-    public Users(String nama, String email, String password, int pemasukan, int pengeluaran, int saldo) {
+    public Users(String nama, String email, String password, int pemasukan, int pengeluaran, int saldo, String kategori) {
         this.nama = nama;
         this.email = email;
         this.password = password;
         this.pemasukan = pemasukan;
         this.pengeluaran = pengeluaran;
         this.saldo = saldo;
+        this.kategori = kategori;
     }
 
     public String getNama() {
@@ -66,5 +68,13 @@ public class Users {
 
     public void setSaldo(int saldo) {
         this.saldo = saldo;
+    }
+
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
     }
 }

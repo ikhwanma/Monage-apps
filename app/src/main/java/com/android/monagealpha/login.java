@@ -63,7 +63,7 @@ public class login extends AppCompatActivity {
     private void loginUser() {
         String email = inputEmail.getText().toString();
         String password = inputPassword.getText().toString();
-
+        email = email.replace("@","%1").replace(".","%2");
         if(TextUtils.isEmpty(email)){
             Toast.makeText(this,"Please Write Your Email...",Toast.LENGTH_SHORT).show();
         }
