@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff0dd"
+    android:orientation="vertical"
+    tools:context=".KategoriPemasukanActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_marginStart="60dp"
+            android:textAlignment="viewStart"
+            android:drawableLeft="@drawable/contoh"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="   Gaji"
+            android:id="@+id/btnGaji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:textSize="20sp"
+            android:layout_marginStart="60dp"
+            android:textAlignment="viewStart"
+            android:drawableLeft="@drawable/contoh"
+            android:textColor="#000000"
+            android:text="   Penjualan"
+            android:id="@+id/btnPenjualan"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@+id/btnGaji"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:textSize="20sp"
+            android:layout_marginStart="60dp"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/contoh"
+            android:textColor="#000000"
+            android:text="   Investasi"
+            android:id="@+id/btnInvestasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@+id/btnPenjualan"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:textSize="20sp"
+            android:layout_marginStart="60dp"
+            android:textAlignment="viewStart"
+            android:drawableLeft="@drawable/contoh"
+            android:textColor="#000000"
+            android:text="   Lainnya"
+            android:textAllCaps="false"
+            android:id="@+id/btnLainnya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@+id/btnInvestasi"
+            tools:layout_editor_absoluteX="0dp" />
+
+
+        <Button
+            android:textSize="20sp"
+            android:layout_marginStart="60dp"
+            android:textAlignment="viewStart"
+            android:drawableLeft="@drawable/contoh"
+            android:textColor="#000000"
+            android:text="   Pengembalian"
+            android:textAllCaps="false"
+            android:id="@+id/btnPengembalian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLainnya"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginTop="12dp"
+            android:background="#3B3750"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/textTitle"
+            tools:layout_editor_absoluteX="4dp" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="46dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/ic_navigate_before_black_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Pilih Kategori"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.458"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView18"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="50dp"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:text="Makanan dan Minuman"-->
+        <!--            android:textSize="18dp"-->
+        <!--            app:layout_constraintStart_toStartOf="@+id/btnMakanan"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/btnMakanan" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

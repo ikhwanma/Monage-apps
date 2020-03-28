@@ -24,7 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class login extends AppCompatActivity {
     private EditText inputEmail,inputPassword;
-    private Button btnLogin,btnRegister;
+    private Button btnLogin,btnRegister,btnForgetPass;
     private ProgressDialog loadingbar;
     private String parentDb = "Users";
     Users user;
@@ -40,7 +40,16 @@ public class login extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         loadingbar = new ProgressDialog(this);
         btnRegister = findViewById(R.id.btnRegister);
+        btnForgetPass= findViewById(R.id.forgotpass);
 
+
+        btnForgetPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (login.this,LupaPassword.class);
+                startActivity(intent);
+            }
+        });
 
 
         btnRegister.setOnClickListener(new View.OnClickListener() {

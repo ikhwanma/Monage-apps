@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff0dd"
+    android:orientation="vertical"
+    tools:context=".KategoriPengluaranActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_marginStart="60dp"
+            android:textAlignment="viewStart"
+            android:drawableLeft="@drawable/contoh"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:text="   Makanan dan Minuman"
+            android:id="@+id/btnMakanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:layout_marginStart="60dp"
+            android:textAlignment="viewStart"
+            android:drawableLeft="@drawable/contoh"
+            android:textColor="#000000"
+            android:text="   Transportasi"
+            android:id="@+id/btnTransportasi"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMakanan"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:layout_marginStart="60dp"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/contoh"
+            android:textColor="#000000"
+            android:text="   Pendidikan"
+            android:id="@+id/btnPendidikan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@+id/btnTransportasi"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:layout_marginStart="60dp"
+            android:textAlignment="viewStart"
+            android:drawableLeft="@drawable/contoh"
+            android:textColor="#000000"
+            android:text="   Elektronik"
+            android:textAllCaps="false"
+            android:id="@+id/btnElektronik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBuku"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:layout_marginStart="60dp"
+            android:textAlignment="viewStart"
+            android:drawableLeft="@drawable/contoh"
+            android:textColor="#000000"
+            android:text="   Belanja"
+            android:textAllCaps="false"
+            android:id="@+id/btnBelanja"
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/btnTelepon"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:layout_marginStart="60dp"
+            android:textAlignment="viewStart"
+            android:drawableLeft="@drawable/contoh"
+            android:textColor="#000000"
+            android:text="   Hiburan"
+            android:id="@+id/btnHiburan"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBelanja"
+            tools:layout_editor_absoluteX="4dp" />
+
+        <Button
+            android:layout_marginStart="60dp"
+            android:textAlignment="viewStart"
+            android:drawableLeft="@drawable/contoh"
+            android:textColor="#000000"
+            android:text="   Telepon"
+            android:textAllCaps="false"
+            android:id="@+id/btnTelepon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@+id/btnKesehatan"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:layout_marginStart="60dp"
+            android:textAlignment="viewStart"
+            android:drawableLeft="@drawable/contoh"
+            android:textColor="#000000"
+            android:text="   Kesehatan"
+            android:textAllCaps="false"
+            android:id="@+id/btnKesehatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@+id/btnElektronik"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:layout_marginStart="60dp"
+            android:textAlignment="viewStart"
+            android:drawableLeft="@drawable/contoh"
+            android:textColor="#000000"
+            android:text="   Buku"
+            android:textAllCaps="false"
+            android:id="@+id/btnBuku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@+id/btnPendidikan"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginTop="12dp"
+            android:background="#3B3750"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/textTitle"
+            tools:layout_editor_absoluteX="4dp" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="46dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/ic_navigate_before_black_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Pilih Kategori"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.458"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView18"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="50dp"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:text="Makanan dan Minuman"-->
+        <!--            android:textSize="18dp"-->
+        <!--            app:layout_constraintStart_toStartOf="@+id/btnMakanan"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/btnMakanan" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

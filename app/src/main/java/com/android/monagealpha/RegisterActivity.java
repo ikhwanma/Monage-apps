@@ -117,8 +117,10 @@ public class RegisterActivity extends AppCompatActivity {
                     userdataMap.put("email", email);
                     userdataMap.put("password",password);
                     userdataMap.put("nama",nama);
+                    userdataMap.put("img","");
                     userdataMap.put("pemasukan",0);
                     userdataMap.put("pengeluaran",0);
+                    userdataMap.put("kategori","");
                     userdataMap.put("saldo",0);
 
                     Rootref.child("Users").child(email).updateChildren(userdataMap);

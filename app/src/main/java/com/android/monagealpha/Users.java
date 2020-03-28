@@ -4,6 +4,7 @@ public class Users {
     private  String nama;
     private String email;
     private String password;
+    private String img;
     private int pemasukan;
     private int pengeluaran;
     private int saldo;
@@ -12,10 +13,11 @@ public class Users {
     public Users() {
     }
 
-    public Users(String nama, String email, String password, int pemasukan, int pengeluaran, int saldo, String kategori) {
+    public Users(String nama, String email, String password, String img, int pemasukan, int pengeluaran, int saldo, String kategori) {
         this.nama = nama;
         this.email = email;
         this.password = password;
+        this.img = img;
         this.pemasukan = pemasukan;
         this.pengeluaran = pengeluaran;
         this.saldo = saldo;
@@ -44,6 +46,14 @@ public class Users {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public int getPemasukan() {

@@ -1,25 +1,18 @@
 package com.android.monagealpha;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.InputFilter;
-import android.text.Selection;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,24 +22,26 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.sql.Time;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 
 public class InputActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
     Button btnAdd,btnBack,btnKategori,btnDate;
-    Kategori kategori;
     String jenis;
     TextView viewKategori,viewDate,textTitle,viewIDR;
     ArrayList<String> jumlah;
     SwitchCompat switchbuttonin;
     int pemasukanHarian,pengeluaranHarian,saldoHarian;
-    String date="";
-    EditText inputUang;
+    String date="",Kategori = "";
+    EditText inputUang,inputCatatan;
     int pemasukan=0,pengeluaran=0,saldo=Prevalent.currentOnlineUser.getSaldo();
+    int REQ_CODE=1;
 
 
     @Override
@@ -57,15 +52,17 @@ public class InputActivity extends AppCompatActivity implements DatePickerDialog
         btnAdd = findViewById(R.id.btnAdd);
         btnBack = findViewById(R.id.btnBack);
         btnKategori = findViewById(R.id.inputKategori);
-        kategori = new Kategori();
         viewDate = findViewById(R.id.viewDate);
         btnDate = findViewById(R.id.btnDate);
         textTitle = findViewById(R.id.textTitle);
         inputUang = findViewById(R.id.inputUang);
-        //viewKategori.setText(kategori.getKategori());
+        inputCatatan = findViewById(R.id.inputCatatan);
         viewIDR = findViewById(R.id.viewIDR);
+        viewKategori = findViewById(R.id.viewKategori);
+        viewKategori.setText(Prevalent.currentOnlineUser.getKategori());
         openKategori();
         back();
+        Kategori = Prevalent.currentOnlineUser.getKategori();
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,8 +70,8 @@ public class InputActivity extends AppCompatActivity implements DatePickerDialog
 
             }
         });
-        //switch buttton
-        switchbuttonin= findViewById(R.id.switchbutton);
+        viewKategori.setText(Kategori);
+                switchbuttonin= findViewById(R.id.switchbutton);
         switchbuttonin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,7 +87,6 @@ public class InputActivity extends AppCompatActivity implements DatePickerDialog
             }
         });
         openDate();
-
     }
 
     private void openDate(){
@@ -117,21 +113,19 @@ public class InputActivity extends AppCompatActivity implements DatePickerDialog
 
     }
     public  void addData(){
-        if(date.equals("")){
+        if(date.equals("") && inputUang.getText().toString().equals("")){
             Toast.makeText(this, "Masukkan Tanggal Dulu", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Masukkan Nominal Uang", Toast.LENGTH_SHORT).show();
         }else{
-
             final int jumlahUang = Integer.parseInt(inputUang.getText().toString());
             final DatabaseReference Rootref = FirebaseDatabase.getInstance().getReference();
-
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
+            String currentDateandTime = sdf.format(new Date());
             Rootref.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
                     Users userData = dataSnapshot.child("Users").child(Prevalent.currentOnlineUser.getEmail()).getValue(Users.class);
                     Prevalent.currentOnlineUser = userData;
-
-
                 }
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -208,7 +202,16 @@ public class InputActivity extends AppCompatActivity implements DatePickerDialog
                     .setValue(saldo);
             Intent intent = new Intent(InputActivity.this,MainActivity.class);
             startActivity(intent);
+            HashMap<String,Object> userData = new HashMap<>();
+            userData.put("title",Kategori);
+            userData.put("kategori",textTitle.getText().toString());
+            userData.put("uang",jumlahUang);
+            userData.put("tanggal",date);
+            userData.put("memo",inputCatatan.getText().toString());
+            Rootref.child("Users").child(Prevalent.currentOnlineUser.getEmail()).child("Detail").child(currentDateandTime).updateChildren(userData);
         }
+
+
 
     }
 
@@ -227,12 +230,27 @@ public class InputActivity extends AppCompatActivity implements DatePickerDialog
         btnKategori.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InputActivity.this,KategoriActivity.class);
-                startActivity(intent);
+                if(switchbuttonin.isChecked()){
+                    Intent intent = new Intent(InputActivity.this,KategoriPemasukanActivity.class);
+                    startActivity(intent);
+                }else{
+                    Intent intent = new Intent(InputActivity.this,KategoriPengluaranActivity.class);
+                    startActivity(intent);
+                }
             }
         });
+
+
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
 
+            String kategori = data.getStringExtra("kategori");
+            Prevalent.currentOnlineUser.setKategori(kategori);
+
+
+    }
 }

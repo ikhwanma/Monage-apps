@@ -7,7 +7,7 @@
     android:background="#fff0dd"
     tools:context=".InputActivity">
 
-    <Button
+    <ImageView
         android:id="@+id/inputKategori3"
 
         android:layout_width="399dp"
@@ -196,11 +196,6 @@
         android:background="@android:color/transparent"
 
         android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
-        android:text="Kesehatan"
-        android:textAlignment="textEnd"
-        android:textAllCaps="false"
-        android:textColor="#FDA300"
-        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
@@ -265,6 +260,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/inputUang"
         app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
+
+    <TextView
+        android:id="@+id/viewKategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="36dp"
+        android:text=""
+        android:textColor="#FDA300"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputKategori" />
+
+    <EditText
+        android:id="@+id/inputCatatan"
+        android:layout_width="291dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputKategori3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
